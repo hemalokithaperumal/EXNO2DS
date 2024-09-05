@@ -23,8 +23,8 @@ STEP 7: Use cross tabulation method to quantitatively analyze the relationship b
 STEP 8: Use heatmap method of representation to show relationships between two variables, one plotted on each axis.
 
 ## CODING AND OUTPUT
-Developed by: Priyanka A
-Register no: 212222230113
+Developed by: HEMA LOKITHA P
+Register no: 212223110014
 ```
 import pandas as pd
 import numpy as np
@@ -140,7 +140,26 @@ plt = sns.boxplot(ax=ax1,x='Pclass',y='Age',hue='Gender',data=df)
 ![Screenshot 2024-09-02 093100](https://github.com/user-attachments/assets/cf3fc757-563d-4420-b9a3-b74a7dab6397)
 
 ```
+sns.catplot(data=df,col="Survived",x="Gender",hue="Pclass",kind="count")
+```
+![Screenshot 2024-09-02 093111](https://github.com/user-attachments/assets/86dbdab9-8278-4c51-8ddb-743010d71cfa)
+
+
+Co-relation
+```
+corr=df.corr()
+sns.heatmap(corr,annot=True)
+```
+
+![Screenshot 2024-09-02 093117](https://github.com/user-attachments/assets/ffa383bf-0d72-4c8e-9384-3ebe8e520a6d)
 
 ```
+sns.pairplot(df)
+```
+
+![Screenshot 2024-09-02 093138](https://github.com/user-attachments/assets/961d3f6a-64da-4b97-80ec-65de4a2ce176)
+
+
 # RESULT
-        <<INCLUDE YOUR RESULT HERE>>
+
+We have performed Exploratory Data Analysis on the given data set successfully.
